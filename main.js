@@ -52,7 +52,3 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
-
-// Initialize GLTFLoader (if needed)
-const loader = new GLTFLoader();
-// Add your GLTF loading logic here
