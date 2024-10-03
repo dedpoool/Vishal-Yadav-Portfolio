@@ -16,14 +16,23 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 relative">
+
 
     <!-- HERO SECTION -->
-    <section class="py-10 md:py-16">
-        <div class="container max-w-screen-xl mx-auto px-4">
-            <nav class="flex items-center justify-between mb-40">
-                <img class="w-12 md:w-20" src="assets/VY logo.svg" alt="Logo" />
-                <a href="https://drive.google.com/file/d/1R1oGssoWf-KX9axe1agXodQCZiIGNzNl/view?usp=sharing"
+    <section class="md:py-16 z-20 relative h-svh flex justify-center bg-gray-900">
+
+        <!-- for 3d elements -->
+        <div class="w-full m-0 p-0">
+            <!-- adding 3d element -->
+            <canvas id="mainCanvas" class="z-0 absolute top-0 w-full"></canvas>
+            
+        </div>
+
+        <div class="container max-w-screen-xl mx-auto px-4 z-20 top-0 absolute pointer-events-none">
+            <nav class="flex items-center justify-between mb-10 z-20 pt-8">
+                <img class="w-12 md:w-20 m-4" src="assets/image/VY logo.svg" alt="Logo" style="filter: invert(1);" />
+                <a class="pointer-events-auto" href="https://drive.google.com/file/d/1R1oGssoWf-KX9axe1agXodQCZiIGNzNl/view?usp=sharing"
                     target="_blank">
                     <button
                         class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">
@@ -32,17 +41,19 @@
                 </a>
             </nav>
 
-            <div class="text-center">
+            
+
+            <div class="text-center relative z-10">
                 <div class="flex justify-center mb-16">
                     <img class="rounded-full w-1/3 shadow-md" src="./assets/image/my try 2square.png" alt="Image" />
                 </div>
 
-                <h6 class="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">
+                <h6 class="font-medium text-gray-100 text-lg md:text-2xl uppercase mb-8">
                     Vishal Yadav
                 </h6>
 
                 <h1
-                    class="font-black text-gray-500 text-4xl md:text-4xl mb-8 whitespace-pre-line leading-loose font-sans">
+                    class="font-black text-gray-400 text-4xl md:text-4xl mb-8 whitespace-pre-line leading-loose font-sans">
                     UX/UI Designer / Graphic Designer / Content Creator
                 </h1>
 
@@ -722,6 +733,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- main js file with 3.js import cdn -->
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/3dPractice.js"></script>
 
     <script>
         feather.replace();
